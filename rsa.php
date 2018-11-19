@@ -124,7 +124,7 @@
             <br/>
             <?php if(!empty($plain_data)): ?>
                 <div class="alert alert-primary" role="alert">
-                    <h2>ข้อความที่ถอดรหัสแล้วคือ <strong><?php echo $plain_data; ?></strong></h2>
+                    <h4>ข้อความที่ถอดรหัสแล้วคือ <strong><?php echo $plain_data; ?></strong></h4>
                 </div>
             <?php endif; ?>
         </div>
