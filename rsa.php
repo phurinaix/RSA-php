@@ -55,10 +55,9 @@
         }
     }
     function encrypt($message, $e, $n) {
-        return pow($message, $e) % $n;
+        return bcpowmod($message, $e, $n);
     }
     function decrypt($ciphertext, $d, $n) {
-        // return pow($ciphertext, $d) % $n;
         return bcpowmod($ciphertext, $d, $n);
     }
 ?>
