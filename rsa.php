@@ -1,7 +1,7 @@
 <?php
     $n = $e = $d = 0;
-    $cipher_data = '';
-    $plain_data = '';
+    $cipher_data = false;
+    $plain_data = false;
 
     if (isset($_GET["e"]) && isset($_GET["d"]) && isset($_GET["n"])) {
         $e = $_GET["e"];
@@ -15,7 +15,7 @@
         $d = $_POST["d"];
         $plaintext = $_POST["plaintext"];
         
-        if (empty($plaintext)) {
+        if (empty($plaintext) && $plaintext != '0') {
             echo "<script>alert('โปรดกรอกข้อมูล');
             window.location.href = window.location.href + '?e=$e&n=$n&d=$d';</script>";
             exit();
@@ -28,6 +28,7 @@
             }
             else {
                 $cipher_data = encrypt((int)$plaintext, $e, $n);
+                // echo gettype($cipher_data);
             }
         }
     }
@@ -51,6 +52,8 @@
             }
             else {
                 $plain_data = decrypt((int)$ciphertext, $d, $n);
+                // $cipher_data = '';
+                // echo strlen($cipher_data);
             }
         }
     }
@@ -101,7 +104,7 @@
             </form>
 
             <br/>
-            <?php if(!empty($cipher_data)): ?>
+            <?php if($cipher_data): ?>
                 <div class="alert alert-primary" role="alert">
                     <h4>ข้อความที่เข้ารหัสแล้วคือ <strong><?php echo $cipher_data; ?></strong></h4>
                 </div>
@@ -121,7 +124,7 @@
             </form>
 
             <br/>
-            <?php if(!empty($plain_data)): ?>
+            <?php if($plain_data): ?>
                 <div class="alert alert-primary" role="alert">
                     <h4>ข้อความที่ถอดรหัสแล้วคือ <strong><?php echo $plain_data; ?></strong></h4>
                 </div>
