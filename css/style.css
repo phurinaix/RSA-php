@@ -1,0 +1,66 @@
+body {
+    font-family: 'Pridi', serif;
+}
+.container {
+}
+h1, h2, h3, h4, label{
+    margin: 0;
+    font-weight: normal !important;
+    font-family: 'Pridi', serif !important;
+}
+h1 {
+    /* text-align: center; */
+    /* font-family: 'Pridi', serif; */
+    margin: 20px 0 5px 0;
+}
+.e-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form {
+    margin: 30px auto;
+}
+.form-en, .form-de {
+    margin: 50px auto 50px auto;
+    width: 80%;
+}
+a {
+    text-decoration: none !important;
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1;
+}
+a:hover {
+    background-color: rgb(209, 209, 209);
+}
+span {
+    color: rgb(0, 47, 255);
+}
+.key {
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: 80%;
+}
+/* .key a {
+    color: black;
+    font-size: 0.6em;
+    transition: 0.5s;
+    background-color: rgb(216, 216, 216);
+}
+.key a:hover {
+    color: white;
+    background-color: rgb(97, 97, 97);
+} */
+.pub-key, .pri-key{
+    /* background-color: lightblue; */
+    text-align: center;
+    border: 2px solid black;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+.pub-key h2 {
+    color: rgb(9, 95, 253);
+}
+.pri-key h2 {
+    color: rgb(255, 8, 8);
+}
