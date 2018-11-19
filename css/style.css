@@ -41,26 +41,9 @@ span {
     text-align: center;
     width: 80%;
 }
-/* .key a {
-    color: black;
-    font-size: 0.6em;
-    transition: 0.5s;
-    background-color: rgb(216, 216, 216);
+#pub {
+    display: inline-block;
 }
-.key a:hover {
-    color: white;
-    background-color: rgb(97, 97, 97);
-} */
-.pub-key, .pri-key{
-    /* background-color: lightblue; */
-    text-align: center;
-    border: 2px solid black;
-    margin: 10px 0 10px 0;
-    padding: 10px;
-}
-.pub-key h2 {
-    color: rgb(9, 95, 253);
-}
-.pri-key h2 {
-    color: rgb(255, 8, 8);
+#pri {
+    display: inline-block;
 }

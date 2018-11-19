@@ -66,23 +66,31 @@
 <body>
     <div class="container">
         <div class="key">
-            <h2><a href="index.php" class="btn btn-danger">สร้างคีย์</a></h2>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                หลักการทำงานของ RSA
-            </button>
             <br/><br/>
-            <div class="pub-key">
-                <h1>Public Key</h1>
-                <h2>(n, e) &#8594; (<?php echo $n; ?>, <?php echo $e; ?>)</h2>
-            </div>
-            <div class="pri-key">
-                <h1>Private Key</h1>
-                <h2>(n, d) &#8594; (<?php echo $n; ?>, <?php echo $d; ?>)</h2>
+            <div class="key-pub-pri">
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;" id="pub">
+                    <div class="card-header">Public Key</div>
+                    <div class="card-body">
+                        <h4>(n, e) &#8594; (<?php echo $n; ?>, <?php echo $e; ?>)</h4>
+                    </div>
+                </div>
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" id="pri">
+                    <div class="card-header">Private Key</div>
+                    <div class="card-body">
+                        <h4>(n, d) &#8594; (<?php echo $n; ?>, <?php echo $d; ?>)</h4>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="form-en">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <div class="form-group">
+                    <a href="index.php" class="btn btn-danger">สร้างคีย์</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        หลักการทำงานของ RSA
+                    </button>
+                </div>
                 <div class="form-group">
                     <label>ใส่ข้อความเพื่อเข้ารหัส</label>
                     <input type="hidden" name="n" value="<?php echo $n; ?>">
